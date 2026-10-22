@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sports Technique Coach</title>
+    <meta name="description" content="Advanced AI-powered biomechanics analysis and coaching for runners.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>AI Sports Technique Coach</span>
+            </div>
+        </header>
+
+        <main>
+            <section id="landing-section" class="hero fade-in">
+                <h1>Master Your Running Technique</h1>
+                <p>Upload a video of your run to get a complete biomechanical analysis, 3D pose extraction, and professional AI coaching feedback based on elite reference data.</p>
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="video-input" accept="video/mp4,video/x-m4v,video/*" hidden>
+                    <label for="video-input" class="upload-label">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Click to upload running video</span>
+                        <small>MP4, MOV up to 50MB</small>
+                    </label>
+                </div>
+                
+                <div id="preview-section" class="hidden">
+                    <div class="video-container">
+                        <video id="video-preview" controls></video>
+                    </div>
+                    <button id="analyze-btn" class="primary-btn">
+                        <span>Analyze Video</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </section>
+
+            <section id="loading-section" class="hidden">
+                <div class="loader-container">
+                    <div class="spinner"></div>
+                    <h2 class="pulsing">Analyzing Biomechanics...</h2>
+                    <ul class="loading-steps">
+                        <li class="active">Video quality validation</li>
+                        <li>MediaPipe 2D pose extraction</li>
+                        <li>TCPFormer 3D pose generation</li>
+                        <li>Gait-cycle detection</li>
+                        <li>Biomechanical feature extraction</li>
+                        <li>Qwen-based coaching feedback</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="results-section" class="hidden fade-in">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button id="new-analysis-btn" class="secondary-btn">Analyze New Video</button>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Quality Result -->
+                    <div class="card quality-card">
+                        <h3>Video Quality</h3>
+                        <div id="quality-result" class="quality-status">
+                            <!-- Filled dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Pose Visualization -->
+                    <div class="card viz-card">
+                        <div class="viz-header">
+                            <h3>Pose Visualization (TCPFormer 3D)</h3>
+                            <span id="viz-status-badge" class="badge">Live 3D</span>
+                        </div>
+                        <div class="viz-wrapper">
+                            <canvas id="skeleton-canvas" width="450" height="280"></canvas>
+                            <div class="viz-controls" id="viz-controls">
+                                <button id="viz-play-btn" type="button" class="ctrl-btn">Pause</button>
+                                <input type="range" id="viz-scrubber" min="0" max="100" value="0">
+                                <span id="viz-frame-counter">0 / 0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gait Analysis -->
+                    <div class="card gait-card">
+                        <h3>Gait Analysis</h3>
+                        <div class="metrics-grid" id="gait-metrics">
+                            <!-- Filled dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Technique Analysis -->
+                    <div class="card technique-card">
+                        <h3>Technique Analysis</h3>
+                        <div class="technique-list" id="technique-findings">
+                            <!-- Filled dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- AI Coaching -->
+                    <div class="card coaching-card full-width">
+                        <h3>AI Coaching Feedback</h3>
+                        <div class="coaching-content" id="coaching-feedback">
+                            <!-- Filled dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

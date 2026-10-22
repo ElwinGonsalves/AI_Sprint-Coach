@@ -1,0 +1,181 @@
+22:     "TCPFormer_ap3d_81.pth.tr"
+31:     print("Downloading TCPFormer checkpoint...")
+46: CHECKPOINT_PATH = "/content/drive/MyDrive/AthletePose3D_Project/models/TCPFormer_ap3d_81.pth.tr"
+74: print("TCPFormer checkpoint loaded successfully.")
+93: DRIVE_TCPFORMER = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+94: LOCAL_TCPFORMER = "/content/TCPFormer"
+96: if not os.path.exists(LOCAL_TCPFORMER):
+97:     shutil.copytree(DRIVE_TCPFORMER, LOCAL_TCPFORMER)
+98:     print("TCPFormer repository restored.")
+100:     print("TCPFormer repository already exists.")
+102: print("Path:", LOCAL_TCPFORMER)
+106: for root, dirs, files in os.walk("/content/TCPFormer/data"):
+111: # Show the exact H36M preprocessing used by TCPFormer
+114:     "/content/TCPFormer/data/preprocess/h36m.py",
+115:     "/content/TCPFormer/data/reader/h36m.py"
+785:     "TCPFormer_ap3d_81.pth.tr"
+1060: print("Searching repository for TCPFormer...")
+1070:                 if "TCPFormer" in text or "tcpformer" in text.lower():
+1075:                         if "TCPFormer" in line or "tcpformer" in line.lower():
+1084: TCP_DRIVE = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1087:     print("TCPFormer already exists in Drive.")
+1090:     !git clone https://github.com/AsukaCamellia/TCPFormer.git "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1091:     print("TCPFormer cloned to Drive.")
+1095: TCP_DRIVE = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1103: TCP_DIR = "/content/TCPFormer"
+1105: print("TCPFormer exists:", os.path.exists(TCP_DIR))
+1111: TCP_DRIVE = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1112: TCP_DIR = "/content/TCPFormer"
+1115:     print("TCPFormer already exists in Drive.")
+1118:     print("TCPFormer copied permanently to Drive.")
+1122: TCP_DRIVE = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1127: TCP_DRIVE = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1128: TCP_DIR = "/content/TCPFormer"
+1132:     print("TCPFormer restored from Drive.")
+1134:     print("TCPFormer already available.")
+1140: TCP_DIR = "/content/TCPFormer"
+1156: CONFIG_PATH = "/content/TCPFormer/configs/h36m/TCPFormer_h36m_81.yaml"
+1160: MODEL_PATH = "/content/TCPFormer/model/Model.py"
+1169: TRAIN_PATH = "/content/TCPFormer/train.py"
+1194: for root, dirs, files in os.walk("/content/TCPFormer"):
+1200:             if "def load_model_TCPFormer" in text:
+1202:                 start = text.find("def load_model_TCPFormer")
+1213: TCP_DIR = "/content/TCPFormer"
+1217:     "/model_params/TCPFormer_ap3d_81.pth.tr"
+1222:     "/configs/h36m/TCPFormer_h36m_81.yaml"
+1226: # Add TCPFormer to Python path
+1235: from utils.learning import load_model_TCPFormer
+1249: model = load_model_TCPFormer(args)
+1274: print("\nTCPFormer checkpoint loaded successfully.")
+1493: REPO = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1494: CHECKPOINT = "/content/drive/MyDrive/AthletePose3D_Project/models/TCPFormer_ap3d_81.pth.tr"
+1495: CONFIG = os.path.join(REPO, "configs/h36m/TCPFormer_h36m_81.yaml")
+1497: print("TCPFormer repo:", os.path.exists(REPO))
+1508: REPO = "/content/drive/MyDrive/AthletePose3D_Project/TCPFormer"
+1513: print("TCPFormer added to Python path.")
+1524:     "TCPFormer_ap3d_81.pth.tr"
+1531:     "TCPFormer_ap3d_81.pth.tr"
+1550: TCP_REPO = "/content/drive/MyDrive/AthletePose3D_Project/code/TCPFormer"
+1553:     print("TCPFormer repository already exists. Skipping clone.")
+1555:     print("Cloning TCPFormer...")
+1558:         "https://github.com/AsukaCamellia/TCPFormer.git",
+1563: print("\nTCPFormer location:")
+1568: TCP_REPO = "/content/drive/MyDrive/AthletePose3D_Project/code/TCPFormer"
+1573:     "configs/h36m/TCPFormer_h36m_81.yaml",
+1589: TCP_REPO = os.path.join(PROJECT, "code", "TCPFormer")
+1594:     "TCPFormer_ap3d_81.pth.tr"
+1600:     "TCPFormer_h36m_81.yaml"
+1603: # Make TCPFormer importable
+1666: print("TCPFormer loaded successfully")
+1780: # Normalize exactly according to AthletePose3D/TCPFormer preprocessing
+1799: print("TCPFormer input:", tcp_input.shape)
+1831: # Convert TCPFormer prediction to NumPy
+1919: print("TCPFormer input:", window_clean.shape)
+1976:     ax.set_title(f"TCPFormer Prediction — Frame {frame}")
+2115: print("TCPFormer input:", tcp_input.shape)
+2129: # 6. TCPFORMER INFERENCE
+2151: output_path = POSE3D_DIR + "/Running_0_cam_1_TCPFormer_3D.npy"
+2200:     ax.set_title(f"TCPFormer Corrected — Frame {frame}")
+2230:     "/content/drive/MyDrive/AthletePose3D_Project/data/poses_3d/Running_0_cam_1_TCPFormer_3D.npy"
+2237: print("========== TCPFORMER ==========")
+2288: ax.set_title(f"TCPFormer Prediction — Frame {frame}")
+2299: # LOAD SAVED TCPFORMER PREDICTION
+2303:     "Running_0_cam_1_TCPFormer_3D.npy"
+2352: # TCPFORMER
+2368: ax1.set_title(f"TCPFormer — Frame {frame}")
+2409:     "Running_0_cam_1_TCPFormer_3D.npy"
+2656:     "/Running_0_cam_1_TCPFormer_features.csv"
+2931: PRED_PATH = FEATURE_DIR + "/Running_0_cam_1_TCPFormer_features.csv"
+2936:     "/Running_0_cam_1_TCPFormer_features_normalized.csv"
+3975: !pip install -q mediapipe
+3980: MODEL_DIR = "/content/mediapipe_models"
+3989:     url = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task"
+3997: import mediapipe as mp
+3998: from mediapipe.tasks import python
+3999: from mediapipe.tasks.python import vision
+4127: import mediapipe as mp
+4146: # MediaPipe image
+4211:     # MediaPipe → COCO-17 mapping
+4318:     "human_running_video_TCPFormer_input.npy"
+4331:     print("TCPFormer input already exists.")
+4389:     # Normalize exactly in TCPFormer style
+4395:     # Our MediaPipe coordinates are already normalized
+4400:     # MediaPipe gives normalized x,y.
+4431:         "Full TCPFormer input:",
+4458:         "TCPFormer windows:",
+4475: TCPFORMER_DIR = (
+4477:     "code/TCPFormer"
+4482:     "models/pretrained/TCPFormer_ap3d_81.pth.tr"
+4485: if TCPFORMER_DIR not in sys.path:
+4486:     sys.path.insert(0, TCPFORMER_DIR)
+4498: # Official TCPFormer architecture
+4551: print("\nTCPFormer loaded successfully.")
+4565:     "human_running_video_TCPFormer_input.npy"
+4571:     "human_running_video_TCPFormer_3D.npy"
+4599:     # TCPFormer inference
+4640:     "human_running_video_TCPFormer_3D.npy"
+4646:     "human_running_video_TCPFormer_3D_combined.npy"
+4694:     "human_running_video_TCPFormer_3D_combined.npy"
+5606:     "human_running_video_TCPFormer_3D_combined.npy"
+5612:     "human_running_video_TCPFormer_3D_full.npy"
+5749:     # 8. Reload TCPFormer only if necessary
+5754:         print("Reloading TCPFormer...")
+5758:         TCPFORMER_DIR = (
+5760:             "/code/TCPFormer"
+5763:         if TCPFORMER_DIR not in sys.path:
+5764:             sys.path.insert(0, TCPFORMER_DIR)
+5798:             "TCPFormer_ap3d_81.pth.tr"
+5828:     # 9. TCPFormer inference
+5896:     "human_running_video_TCPFormer_3D_full.npy"
+6363:     "human_running_video_TCPFormer_3D_full.npy"
+6427:     "human_running_video_TCPFormer_3D_full.npy"
+6477:     "human_running_video_TCPFormer_3D_full.npy"
+6522:     "human_running_video_TCPFormer_3D_full.npy"
+6602:     "TCPFormer 3D Pose Across Running Video",
+6662: plt.title("MediaPipe COCO 2D — Vertical Leg Motion")
+6684: plt.title("MediaPipe COCO 2D — Horizontal Ankle Motion")
+6806:     "MediaPipe COCO-17 Pose Overlay",
+8034:     "human_running_video_TCPFormer_3D_full.npy"
+9145:     "human_running_video_TCPFormer_3D_full.npy"
+9992: from mediapipe.tasks import python
+9993: from mediapipe.tasks.python import vision
+10015:     "/content/mediapipe_models/"
+10031:     print("Skipping MediaPipe extraction.")
+10036:     # MediaPipe configuration
+10049:     # MediaPipe → COCO-17
+10084:     # Run MediaPipe
+10139:     print("MEDIAPIPE 2D EXTRACTION COMPLETE")
+10485:     "tcpformer_code":
+10486:         PROJECT + "/code/TCPFormer",
+10489:     "tcpformer_checkpoint":
+10492:         "TCPFormer_ap3d_81.pth.tr",
+10498:         "Running_0_cam_1_TCPFormer_3D.npy",
+10501:     "reference_tcpformer_features":
+10504:         "Running_0_cam_1_TCPFormer_features.csv",
+10511:     "reference_tcpformer_normalized":
+10514:         "Running_0_cam_1_TCPFormer_features_normalized.csv",
+10550:         "human_running_video_TCPFormer_3D_full.npy",
+10726:         "tcpformer_setup": True,
+10727:         "tcpformer_checkpoint_saved": True,
+10781:  -> MediaPipe 2D pose
+10784:  -> TCPFormer
+10801: TCPFormer setup: COMPLETE
+10877:     "TCPFormer checkpoint":
+10880:         "TCPFormer_ap3d_81.pth.tr",
+10886:     "TCPFormer code":
+10888:         "/code/TCPFormer",
+10963:         "human_running_video_TCPFormer_3D_full.npy",
+10980:         "Running_0_cam_1_TCPFormer_3D.npy"
+11055:     "human_running_video_TCPFormer_3D_full.npy"
+11117: print("Model      : MediaPipe Pose")
+11129:     "human_running_video_TCPFormer_3D_full.npy"
+11136: print("Model      : TCPFormer")
+11295:     f"TCPFormer 3D Pose — Frame {frame_idx}"
+11413: MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
+11415: print("Loading Qwen...")
+11428: print("QWEN LOADED")
+11517: # Convert to Qwen chat format
+11564: print("QWEN RUNNING COACH")
+11668: # Qwen chat template
+11727:     "model": "Qwen/Qwen2.5-7B-Instruct",
+11744: print("FINAL QWEN COACHING REPORT")

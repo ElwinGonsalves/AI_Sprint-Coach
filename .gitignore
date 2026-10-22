@@ -1,0 +1,76 @@
+# ==========================================
+# Sprint Coach (.gitignore)
+# ==========================================
+
+# 1. Environment Secrets & Credentials
+.env
+.env*.local
+*.key
+*.pem
+
+# 2. Large Model Weights (Exceeds GitHub limits / auto-downloadable via setup_ml.py)
+# TCPFormer checkpoint is ~423MB and MediaPipe model is ~9.4MB
+# Both are downloaded on demand using: python setup_ml.py
+models/*
+!models/.gitkeep
+
+# 3. User Uploads & Temporary Video/Media Cache
+uploads/*
+!uploads/.gitkeep
+temp_*
+*.tmp
+*.log
+
+# 4. Large GIFs in TCPFormer (Exceeds or approaches GitHub 100MB file limit)
+TCPFormer/figure/*.gif
+
+# 5. Local Notebook Backups with Heavy Base64 Animation Outputs
+*_full.ipynb
+
+# 6. Python Bytecode, Caches & Build Artifacts
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# 7. Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

@@ -74,4 +74,6 @@ desktop.ini
 *.swp
 *.swo
 *~
+*.exe
+cloudflared*
 

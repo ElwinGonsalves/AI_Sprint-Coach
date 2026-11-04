@@ -1,0 +1,29 @@
+# Version control & environments
+.git
+.gitignore
+.env
+.env*.local
+.venv
+venv
+ENV
+
+# Python caches
+__pycache__
+*/__pycache__
+*/*/__pycache__
+*.py[cod]
+
+# Large local files (models are downloaded inside container via setup_ml.py)
+models/*.pth.tr
+models/*.task
+uploads/*.mp4
+videos/
+Sprint_model_full.ipynb
+TCPFormer/figure/*.gif
+
+# IDE / OS files
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+desktop.ini

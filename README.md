@@ -1,3 +1,14 @@
+---
+title: AI Sprint Coach
+emoji: 🏃
+colorFrom: cyan
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+---
+
 # 🏃 AI Sprint Coach (AthletePose3D)
 
 > **End-to-End Monocular 3D Biomechanics & AI Technique Coaching Web Application**  
@@ -132,3 +143,4 @@ Detailed technical documents are available in the [`documentation/`](./documenta
 ## 📄 License
 
 This project is licensed under the MIT License.
+

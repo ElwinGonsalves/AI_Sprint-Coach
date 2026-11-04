@@ -199,26 +199,78 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 4. Coaching Feedback (LLM)
+        // 4. Coaching Feedback (LLM - Sprint Coach)
         const coaching = data.coaching_feedback || {};
         const coachingDiv = document.getElementById('coaching-feedback');
+
+        function formatCoachingContent(text) {
+            if (!text) return '<p style="color: var(--text-muted);">No feedback recorded.</p>';
+
+            // Clean any replacement characters
+            let safe = text.replace(/\uFFFD/g, '°');
+
+            // Escape basic HTML entities
+            safe = safe
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+
+            // Convert markdown bold **text** to <strong>text</strong>
+            safe = safe.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            // Convert bullet lines to <ul><li>
+            const lines = safe.split('\n');
+            let html = '';
+            let inList = false;
+
+            for (let rawLine of lines) {
+                const line = rawLine.trim();
+                if (!line) {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                    continue;
+                }
+
+                // Check bullet syntax: * item or - item or *   item
+                const bulletMatch = line.match(/^(\*|-)\s+(.*)/);
+                if (bulletMatch) {
+                    if (!inList) {
+                        html += '<ul class="coaching-bullets">';
+                        inList = true;
+                    }
+                    html += `<li>${bulletMatch[2]}</li>`;
+                } else {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                    html += `<p>${line}</p>`;
+                }
+            }
+
+            if (inList) html += '</ul>';
+            return html;
+        }
+
         coachingDiv.innerHTML = `
             <div class="coaching-section">
-                <h4>What We Observed</h4>
-                <p>${coaching.what_we_observed || 'No observations recorded.'}</p>
+                <h4>🔍 What We Observed (The Numbers in Plain English)</h4>
+                ${formatCoachingContent(coaching.what_we_observed)}
             </div>
             <div class="coaching-section">
-                <h4>Possible Interpretation</h4>
-                <p>${coaching.possible_interpretation || 'Within normal parameters.'}</p>
+                <h4>⚡ What This Means For Your Sprint (Track Performance Impact)</h4>
+                ${formatCoachingContent(coaching.possible_interpretation)}
             </div>
             <div class="coaching-section">
-                <h4>Coaching Focus</h4>
-                <p>${coaching.coaching_focus || 'Maintain current running mechanics.'}</p>
+                <h4>🎯 Coaching Focus (Mental Cues & Track Drills)</h4>
+                ${formatCoachingContent(coaching.coaching_focus)}
             </div>
             ${coaching.overall_summary ? `
-            <div class="coaching-section" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem;">
-                <h4>Overall Summary</h4>
-                <p style="color: var(--text-main); font-weight: 500;">${coaching.overall_summary}</p>
+            <div class="coaching-summary-box">
+                <h4>🏁 Coach's Quick Takeaway</h4>
+                ${formatCoachingContent(coaching.overall_summary)}
             </div>
             ` : ''}
         `;

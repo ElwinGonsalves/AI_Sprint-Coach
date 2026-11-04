@@ -435,14 +435,74 @@ video {
 
 .coaching-section {
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(0, 240, 255, 0.3);
+    transition: border-color 0.2s ease;
+}
+
+.coaching-section:hover {
+    border-left-color: var(--accent-color);
 }
 
 .coaching-section h4 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .coaching-section p {
-    color: var(--text-muted);
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.coaching-section strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.coaching-bullets {
+    margin: 0.4rem 0 0.8rem 1.25rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.coaching-bullets li {
+    margin-bottom: 0.35rem;
+}
+
+.coaching-bullets li strong {
+    color: var(--accent-color);
+}
+
+.coaching-summary-box {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(112, 0, 255, 0.08) 100%);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.coaching-summary-box h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coaching-summary-box p {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
 }

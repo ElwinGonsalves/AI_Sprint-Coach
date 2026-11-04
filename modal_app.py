@@ -71,3 +71,4 @@ def fastapi_app():
     os.chdir("/root")
     from app import app as web_app
     return web_app
+

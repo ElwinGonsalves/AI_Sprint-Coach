@@ -13,6 +13,7 @@ Welcome to the comprehensive technical documentation for **Sprint Coach (Athlete
 | **[03_DASHBOARD_AND_METRICS.md](./03_DASHBOARD_AND_METRICS.md)** | **Dashboard & Telemetry** | Breakdown of all UI components, HTML5 Canvas 3D skeleton visualizer, metrics cards, deviation badges, and backend JSON response schema. |
 | **[04_LLM_COACHING_AND_PROMPTS.md](./04_LLM_COACHING_AND_PROMPTS.md)** | **LLM Prompts & Guardrails** | Groq API model routing, exact system and user prompts, the 10 strict coaching rules, and regex section parser. |
 | **[05_TROUBLESHOOTING_AND_DEPLOYMENT.md](./05_TROUBLESHOOTING_AND_DEPLOYMENT.md)** | **Troubleshooting & Operations** | Post-mortems of fixed issues (NaN JSON crash, TCPFormer CPU support, Groq models, cp1252), camera setup tips, and concurrency guide. |
+| **[06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md](./06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md)** | **Master Preparation & Viva Guide** | 60-second elevator pitch, 5-minute technical narrative, phase-by-phase build history, math formulas, and Top 15 interview/viva Q&A with model answers. |
 
 ---
 

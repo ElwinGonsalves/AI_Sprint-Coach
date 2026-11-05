@@ -137,6 +137,7 @@ Detailed technical documents are available in the [`documentation/`](./documenta
 - **[03_DASHBOARD_AND_METRICS.md](./documentation/03_DASHBOARD_AND_METRICS.md)**: Full UI specification, Canvas engine, and JSON response schema.
 - **[04_LLM_COACHING_AND_PROMPTS.md](./documentation/04_LLM_COACHING_AND_PROMPTS.md)**: System prompt, 10 coaching guardrails, and regex parser.
 - **[05_TROUBLESHOOTING_AND_DEPLOYMENT.md](./documentation/05_TROUBLESHOOTING_AND_DEPLOYMENT.md)**: Resolved bug post-mortems, capture guidelines, and concurrency.
+- **[06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md](./documentation/06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md)**: Master interview & viva guide, 5-minute technical story, math formulas, and Top 15 Q&A with model answers.
 
 ---
 

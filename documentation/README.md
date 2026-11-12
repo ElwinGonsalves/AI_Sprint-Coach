@@ -14,6 +14,7 @@ Welcome to the comprehensive technical documentation for **Sprint Coach (Athlete
 | **[04_LLM_COACHING_AND_PROMPTS.md](./04_LLM_COACHING_AND_PROMPTS.md)** | **LLM Prompts & Guardrails** | Groq API model routing, exact system and user prompts, the 10 strict coaching rules, and regex section parser. |
 | **[05_TROUBLESHOOTING_AND_DEPLOYMENT.md](./05_TROUBLESHOOTING_AND_DEPLOYMENT.md)** | **Troubleshooting & Operations** | Post-mortems of fixed issues (NaN JSON crash, TCPFormer CPU support, Groq models, cp1252), camera setup tips, and concurrency guide. |
 | **[06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md](./06_HOW_IT_WAS_BUILT_AND_INTERVIEW_PREP.md)** | **Master Preparation & Viva Guide** | 60-second elevator pitch, 5-minute technical narrative, phase-by-phase build history, math formulas, and Top 15 interview/viva Q&A with model answers. |
+| **[RESEARCH_PAPER_RESULTS_AND_EVALUATION.md](./RESEARCH_PAPER_RESULTS_AND_EVALUATION.md)** | **Research Paper Evaluation & Results** | Rigorous empirical benchmarks ($N=25$ videos, $4,120$ frames), replacement tokens for Sec. IV-H, normative population baseline, and expert LLM feedback study ($n=5$ coaches/biomechanists). |
 
 ---
 

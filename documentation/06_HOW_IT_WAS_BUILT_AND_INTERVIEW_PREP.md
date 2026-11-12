@@ -255,3 +255,4 @@ Standard LLMs hallucinate medical conditions (e.g. diagnosing "patellofemoral pa
 > 1. **Multi-Camera Fusion:** Support dual-camera inputs (lateral and frontal) to capture 3D pelvic drop and knee valgus/varus (rotational asymmetries).
 > 2. **Footwear & Surface Classification:** Incorporate ground reaction force (GRF) estimation using physics-informed neural networks (PINNs).
 > 3. **Longitudinal Progress Tracking:** Add user authentication and database persistence (e.g. PostgreSQL) to track a sprinter's technique changes across weeks of training.
+
